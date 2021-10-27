@@ -1,7 +1,7 @@
 ---
 title: "String manipulation"
-author: "R. Krause"
-date: "2021-09-08"
+author: "NN"
+date: "2021-10-25"
 done: false
 ---
 
@@ -15,71 +15,57 @@ library(tidyverse)
 
 > This little tutorial aims to make you familiar with some of the functions of the `stringr` package and a few regular expressions. 
 
-```{r, echo = FALSE}
-htmltools::img(src = "https://raw.githubusercontent.com/rstudio/hex-stickers/999a52ccc6b53d8a620a5f930e4f9e68492d346d/PNG/stringr.png",
-               style = "float:right;height:100px;")
-```
-
-
 ## Strings and escape sequences in R
 
 ##### Write a sentence with escape sequences.
 Try the sentence: `"It's the end of the world!" he said.\` . 
 Assign the string to a variable and try as`print()`, `cat()` and `writeLines()`.
 
-```{r, solution = TRUE}
-my_string <- '"It\'s the end of the world!" he said.\\'
-print(my_string)
-cat(my_string)
-writeLines(my_string)
+```{r}
+'"It\'s the end of the world!" he said.\\'
+
 ```
 
 ## `stringr` functions 
 
 We will be using the `words` data that is built into `stringr`. 
-The data set is availble to you if you load the package.
+The data set is available to you if you load the package.
 
 ```{r}
-length(words)
+
 ```
 
 
 ##### Select words that
 
 1. Contain a `y`
-```{r, solution = TRUE}
-str_subset(words, "y")
+```{r}
 
 ```
 
 2. Start with `y`
-```{r, solution = TRUE}
-str_subset(words, "^y")
+```{r}
 
 ```
 
 
 3. Contain a `y` within the word
 
-```{r, solution = TRUE}
-str_subset(words, ".y.")
-
+```{r}
 ```
 
 ##### Extract the `y` and the previous character.
 
 Note: Use the function `unique()` around the results to avoid printing many empty matches.
 
-```{r, solution = TRUE}
-str_match(words, ".y") %>% unique()
+```{r}
 ```
 
 
 ##### Get the lengths of the first ten words
 
 You can use `head(words, 10)` as a convenient way to access the elements of the `words` vector.
-```{r, solution = TRUE}
-str_length(head(words, 10))
+```{r}
 ```
 
 
@@ -89,29 +75,25 @@ Read the genome sequence of the Hepatitis D virus: [hepd.fasta](https://biostat2
 For now, just execute the following:
 
 ```{r}
-hepd <- readr::read_lines("https://biostat2.uni.lu/practicals/data/hepd.fasta")
+hepd_genome <- readr::read_lines("https://biostat2.uni.lu/practicals/data/hepd.fasta")
 ```
 
 ##### What is the length of the genome sequence? 
 
-```{r, solution = TRUE}
-str_length(hepd)
+```{r}
 ```
 
 ##### What is the sequence composition? How often does each character occur?
 
-```{r, solution = TRUE}
-str_count(hepd, c("A", "C", "G","T"))
+```{r}
 ```
 
 
 ##### Find motifs in the sequence using `str_locate()`. 
 
-Find all matches of the sequence $ATG$ in the sequence. 
+Find all matches of the sequence $ATG$ in the genome sequence. 
 
-```{r, solution = TRUE}
-str_locate_all(hepd, "ATG")
-str_locate_all(hepd ,"GAATTC|CTTAAG")
+```{r}
 ```
 
 
