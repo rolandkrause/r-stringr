@@ -5,9 +5,6 @@ date: "2021-10-25"
 done: false
 ---
 
-```{r setup-practical, child = '_setup_practical.Rmd'}
-```
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
