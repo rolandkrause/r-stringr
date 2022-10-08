@@ -59,7 +59,7 @@ str_subset(words, "y")
 str_detect(words, "^y")
 ```
 
-##### Retrieve the indeces for all words containing `ch` within the word. 
+##### Retrieve the indices for all words containing `ch` within the word. 
 
 `ch` must not be present at the start or the end of the word. 
 
@@ -76,7 +76,7 @@ str_extract(words, ".y") %>% unique()
 ```
 
 
-##### Get the lengths of the first ten words
+##### Get the length of the first ten words
 
 You can use `head(words, 10)` as a convenient way to access the elements of the `words` vector.
 ```{r, solution = TRUE}
