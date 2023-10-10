@@ -1,0 +1,87 @@
+  ---
+title: "String manipulation"
+subtitle: ""
+author: "NN"
+date: "23 Oct. 2022"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+> This little tutorial aims to make you familiar with some of the functions of the `stringr` package and a few regular expressions. 
+
+## Strings and escape sequences in R
+
+## `stringr` functions 
+
+We will be using the `words` data that is built into `stringr`. 
+The data set is available to you if you load the package.
+
+```{r}
+# Write your solution
+```
+
+
+##### Select words that contain a `y`
+
+```{r}
+# Write your solution
+```
+
+##### Retrieve a boolean vector that indicates which words start with `y`
+
+
+```{r}
+# Write your solution
+```
+
+##### Retrieve the indices for all words containing `ch` within the word. 
+
+`ch` must not be present at the start or the end of the word. 
+
+```{r}
+# Write your solution
+```
+
+##### Extract the `y` and the previous character.
+
+Note: Use the function `unique()` around the results to avoid printing many empty matches.
+
+```{r}
+# Write your solution
+```
+
+
+## Viral research 
+
+Read the genome sequence of the Hepatitis D virus: [hepd.fasta](https://biostat2.uni.lu/practicals/data/hepd.fasta).
+For now, just execute the following:
+
+```{r}
+hepd <- readr::read_lines("https://biostat2.uni.lu/practicals/data/hepd.fasta")
+```
+
+##### What is the length of the genome sequence?
+
+```{r}
+# Write your solution
+```
+
+##### What is the sequence composition? How often does each character occur?
+
+```{r}
+# Write your solution
+```
+
+
+##### Find motifs in the sequence 
+
+Find the position of all matches of $ATG$ in the sequence. 
+
+```{r}
+# Write your solution
+```
+
+
