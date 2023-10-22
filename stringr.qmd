@@ -12,7 +12,6 @@ library(tidyverse)
 
 > This little tutorial aims to make you familiar with some of the functions of the `stringr` package and a few regular expressions. 
 
-## Strings and escape sequences in R
 
 ## `stringr` functions 
 
@@ -75,10 +74,9 @@ hepd <- readr::read_lines("https://biostat2.uni.lu/practicals/data/hepd.fasta")
 # Write your solution
 ```
 
+##### Find all motifs in the sequence
 
-##### Find motifs in the sequence 
-
-Find the position of all matches of $ATG$ in the sequence. 
+Find all matches of the sequence $ATG$ in the sequence. 
 
 ```{r}
 # Write your solution
