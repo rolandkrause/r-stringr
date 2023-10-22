@@ -96,7 +96,7 @@ agro_data <- read_csv("data/PubChem_Agrochemicals_20231022.csv")
 ```
 
 
-How many of these agrochemicals are also drugs (pharmaceuticals)?
+#### How many of these agrochemicals are also drugs (pharmaceuticals)?
 Look in the `annothits` column for entries that have the tag 
 `Drug and Medication Information`.
 
@@ -105,7 +105,7 @@ Look in the `annothits` column for entries that have the tag
 ```
 
 
-How many agrochemicals have stereochemistry information?
+#### How many agrochemicals have stereochemistry information?
 Stereochemistry information is encoded in the `isosmiles` column and 
 detected by looking for `@` or `\` or `/` symbols. 
 
@@ -114,7 +114,7 @@ detected by looking for `@` or `\` or `/` symbols.
 ```
 
 
-What happens if you run this on the `canonicalsmiles` column instead?
+#### What happens if you run this on the `canonicalsmiles` column instead?
 What does this tell you about Canonical SMILES?
 
 ```{r canonical_smiles}
@@ -122,8 +122,8 @@ What does this tell you about Canonical SMILES?
 ```
 
 
-Return the `canonicalsmiles` of all agrochemicals containing a triple bond
-(encoded by the `#` in the SMILES - canonical or isomeric).
+#### Return the `canonicalsmiles` of all agrochemicals containing a triple bond
+Triple bonds are encoded by the `#` in the SMILES - canonical or isomeric.
 Use `str_view` to look at those that are also salts (encoded by `.`).
 
 ```{r salts_and_triple_bonds}
@@ -131,7 +131,8 @@ Use `str_view` to look at those that are also salts (encoded by `.`).
 ```
 
 
-How many agrochemicals contain fluorine? Hint: look at the `mf` column
+#### How many agrochemicals contain fluorine? 
+Hint: look at the `mf` column
 (molecular formula) and look for the element `F` but be careful, there
 are also agrochemicals containing iron (`Fe`) as well. 
 Look at the column contents to see how you can separate these entries. 
@@ -141,15 +142,18 @@ Look at the column contents to see how you can separate these entries.
 ```
 
 
-Generate a list of the names of agrochemicals that have been contributed by 
-Luxembourg contributors. Use the `sidsrcname` column to detect Luxembourg. 
+#### Generate a list of the names of agrochemicals that have been contributed by 
+Luxembourg contributors. 
+Use the `sidsrcname` column to detect Luxembourg. 
 
 ```{r agrochem_from_lux}
 # Write your solution here
 ```
 
 
-Finally, how many agrochemicals were contributed in 2023? Use the `cidcdate`
+#### Finally, how many agrochemicals were contributed in 2023? 
+
+Use the `cidcdate`
 column, which is in `YYYYMMDD` format. 
 
 ```{r agrochem_2023}
