@@ -2,7 +2,7 @@
 title: "String manipulation"
 subtitle: ""
 author: "NN"
-date: "23 Oct. 2022"
+date: "23 Oct. 2023"
 ---
 
 ```{r setup, include=FALSE}
