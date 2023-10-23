@@ -53,7 +53,7 @@ Note: Use the function `unique()` around the results to avoid printing many empt
 ```
 
 
-## Viral research 
+## Virus Research 
 
 Read the genome sequence of the Hepatitis D virus: [hepd.fasta](https://biostat2.uni.lu/practicals/data/hepd.fasta).
 For now, just execute the following:
@@ -142,8 +142,7 @@ Look at the column contents to see how you can separate these entries.
 ```
 
 
-#### Generate a list of the names of agrochemicals that have been contributed by 
-Luxembourg contributors. 
+#### Generate a list of the names of agrochemicals that have been contributed by Luxembourg contributors. 
 Use the `sidsrcname` column to detect Luxembourg. 
 
 ```{r agrochem_from_lux}
