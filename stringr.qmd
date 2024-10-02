@@ -5,9 +5,10 @@ author: "NN"
 date: "7 Oct. 2024"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup}
+#| include: true
 library(stringr)
+library(readr)
 ```
 
 > This little tutorial aims to make you familiar with some of the functions of the `stringr` package and a few regular expressions. 
@@ -59,7 +60,7 @@ Read the genome sequence of the Hepatitis D virus: [hepd.fasta](https://biostat2
 For now, just execute the following:
 
 ```{r}
-hepd <- readr::read_lines("https://biostat2.uni.lu/practicals/data/hepd.fasta")
+hepd <- readr::read_lines("data/hepd.fasta")
 ```
 
 ##### What is the length of the genome sequence?
