@@ -2,12 +2,12 @@
 title: "String manipulation"
 subtitle: ""
 author: "NN"
-date: "23 Oct. 2023"
+date: "7 Oct. 2024"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
+library(stringr)
 ```
 
 > This little tutorial aims to make you familiar with some of the functions of the `stringr` package and a few regular expressions. 
@@ -92,7 +92,7 @@ These exercises give some brief insights into cheminformatics with strings,
 using a dataset of agrochemicals (pesticides) from PubChem. 
 
 ```{r read_data}
-agro_data <- read_csv("data/PubChem_Agrochemicals_20231022.csv")
+agro_data <- read_csv("data/PubChem_Agrochemicals_20231022.csv.gz")
 ```
 
 
