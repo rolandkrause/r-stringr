@@ -2,7 +2,7 @@
 title: "String manipulation"
 subtitle: ""
 author: "NN"
-date: "7 Oct. 2024"
+date: "2025-10-20"
 ---
 
 ```{r setup}
@@ -56,7 +56,7 @@ Note: Use the function `unique()` around the results to avoid printing many empt
 
 ## Virus Research 
 
-Read the genome sequence of the Hepatitis D virus: [hepd.fasta](https://biostat2.uni.lu/practicals/data/hepd.fasta).
+Read the genome sequence of the Hepatitis D virus.
 For now, just execute the following:
 
 ```{r}
